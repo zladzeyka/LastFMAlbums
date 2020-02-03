@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="19A602" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AlbumDetails" representedClassName="AlbumDetails" syncable="YES">
+        <attribute name="artist" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="tracks" optional="YES" attributeType="Transformable" valueTransformerName="nil" customClassName="Tracks"/>
+    </entity>
+    <elements>
+        <element name="AlbumDetails" positionX="148.37109375" positionY="1.453125" width="128" height="103"/>
+    </elements>
+</model>
