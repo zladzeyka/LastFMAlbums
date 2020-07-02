@@ -13,7 +13,7 @@ extension SearchArtistController: UISearchBarDelegate {
         let command = LastFMCommand.searchArtist
         let text = searchText
 
-        ApiManager().requestData([text], command: command) {[weak self] (artists: [SearchArtists.ArtistResults.ArtistMatches.Artist]) in
+        ApiManager().requestData([text], command: command) {[weak self] (artists: [Artist]) in
             self?.dataManager.items = artists
             DispatchQueue.main.async {
                 self?.artistsTableView.reloadData()

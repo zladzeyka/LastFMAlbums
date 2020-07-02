@@ -10,13 +10,13 @@ import Foundation
 
 public class ArtistDataManager {
     
-    var items: [SearchArtists.ArtistResults.ArtistMatches.Artist] = []
+    var items: [Artist] = []
     
     public var itemsCount: Int {
         return items.count
     }
     
-    func item(at index: Int) -> SearchArtists.ArtistResults.ArtistMatches.Artist {
+    func item(at index: Int) -> Artist {
         return items[index]
     }
 }

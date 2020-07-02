@@ -13,15 +13,15 @@ import Foundation
 struct SearchArtists:Codable {
     struct ArtistResults:Codable {
         struct ArtistMatches: Codable {
-            struct Artist: Codable
-            {
-                var name : String
-                var mbid : String
-                var listeners : String
-            }
             var artist:[Artist]
         }
         var artistmatches:ArtistMatches
     }
     var results:ArtistResults
+}
+struct Artist: Codable
+{
+    var name : String
+    var mbid : String
+    var listeners : String?
 }
