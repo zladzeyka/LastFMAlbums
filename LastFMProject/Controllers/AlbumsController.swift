@@ -30,7 +30,7 @@ class AlbumsController: LastFMViewController {
     fileprivate func loadTopAlbums() {
         let command = LastFMCommand.getTopAlbums
         let artistName = self.artistName
-        ApiManager().requestData([artistName], command: command) { [weak self] (albums: [TopAlbums.Albums.Album]) in
+        ApiManager().requestData([artistName], command: command) { [weak self] (albums: [Album]) in
             self?.dataManager.items = albums
             DispatchQueue.main.async {
                 self?.albumsTableView?.reloadData()

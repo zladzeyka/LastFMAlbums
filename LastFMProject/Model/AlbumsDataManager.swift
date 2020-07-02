@@ -9,13 +9,13 @@
 import Foundation
 public class AlbumsDataManager {
     
-    var items: [TopAlbums.Albums.Album] = []
+    var items: [Album] = []
     
     public var itemsCount: Int {
         return items.count
     }
     
-    func item(at index: Int) -> TopAlbums.Albums.Album {
+    func item(at index: Int) -> Album {
         return items[index]
     }
     

@@ -18,7 +18,7 @@ public class AlbumCell: UITableViewCell {
     @IBOutlet var saveButton: SaveButton!
     var buttonState = SaveButtonState.save
 
-    func configure(with item: TopAlbums.Albums.Album) {
+    func configure(with item: Album) {
         let url = item.image[1].text
         if  !url.isEmpty {
             coverImage.af_setImage(
