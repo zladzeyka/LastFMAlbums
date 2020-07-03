@@ -176,23 +176,9 @@
 		FD636EEB237C649F00524519 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FD112B562387FF7200E0619E /* Connectivity.swift */,
-				FD938A9D236B426E0002382B /* ApiManager.swift */,
-				FDD903732375D8180048E00D /* CoreDataHelper.swift */,
+				FD6BD55F24AF21770007948F /* Helpers&Managers */,
 				FDC6C75F237014AF0050799F /* SearchArtists.swift */,
 				FDC6C767237016090050799F /* TopAlbums.swift */,
-				FD4044882375B99300469C5C /* SavedAlbumsDataSourceProvider.swift */,
-				FD6B0DBD2377559200D04CD6 /* SavedAlbumsDataManager.swift */,
-				FDC6C769237034610050799F /* AlbumDataManager.swift */,
-				FDC6C76B2370349A0050799F /* AlbumDataSourceManager.swift */,
-				FDC6C75B236F380C0050799F /* AlbumsDataManager.swift */,
-				FDC6C75D236F38230050799F /* AlbumsDataSourceProvider.swift */,
-				FD80395E236DE02D000F552F /* ArtistDataManager.swift */,
-				FD80395C236DD690000F552F /* ArtistDataSourceProvider.swift */,
-				FD112AFB23858AFC00E0619E /* AlbumDetails+CoreDataClass.swift */,
-				FD112AFC23858AFC00E0619E /* AlbumDetails+CoreDataProperties.swift */,
-				FD65D40A239EA8BD00D7E69C /* Navigator.swift */,
-				FD65D40E239EAF1400D7E69C /* AppNavigator.swift */,
 				FDE297C623A7E1A400B19990 /* AlbumInfo.swift */,
 				FDE297CE23A8E29D00B19990 /* Tracks.swift */,
 				FDE297D023A8E2BB00B19990 /* Track.swift */,
@@ -207,8 +193,30 @@
 				FD40448C2375D6BC00469C5C /* LastFMViewController+Utils.swift */,
 				FDEA93992385476D00042CD6 /* SearchArtistController+UISearchBar.swift */,
 				FD636EE8237B49AA00524519 /* Utils.swift */,
+				FD112AFB23858AFC00E0619E /* AlbumDetails+CoreDataClass.swift */,
+				FD112AFC23858AFC00E0619E /* AlbumDetails+CoreDataProperties.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FD6BD55F24AF21770007948F /* Helpers&Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FD112B562387FF7200E0619E /* Connectivity.swift */,
+				FD938A9D236B426E0002382B /* ApiManager.swift */,
+				FDD903732375D8180048E00D /* CoreDataHelper.swift */,
+				FD4044882375B99300469C5C /* SavedAlbumsDataSourceProvider.swift */,
+				FD6B0DBD2377559200D04CD6 /* SavedAlbumsDataManager.swift */,
+				FDC6C769237034610050799F /* AlbumDataManager.swift */,
+				FDC6C76B2370349A0050799F /* AlbumDataSourceManager.swift */,
+				FDC6C75B236F380C0050799F /* AlbumsDataManager.swift */,
+				FDC6C75D236F38230050799F /* AlbumsDataSourceProvider.swift */,
+				FD80395E236DE02D000F552F /* ArtistDataManager.swift */,
+				FD80395C236DD690000F552F /* ArtistDataSourceProvider.swift */,
+				FD65D40A239EA8BD00D7E69C /* Navigator.swift */,
+				FD65D40E239EAF1400D7E69C /* AppNavigator.swift */,
+			);
+			path = "Helpers&Managers";
 			sourceTree = "<group>";
 		};
 		FD8A24DC2367520600EAB6DF = {
