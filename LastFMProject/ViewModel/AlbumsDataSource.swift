@@ -9,18 +9,11 @@
 import Foundation
 import UIKit
 
-class AlbumsDataSource: GenericDataSource<Album>, UITableViewDataSource {
+class AlbumsDataSource: GenericDataSource<Album>, UITableViewDataSource, UITableViewDelegate {
     struct Constants {
         static let cellIdentifier = "albumsCellID"
         static let mainStoryboard = "Main"
     }
-
-//    private let dataManager: AlbumsDataManager
-
-//    init(dataManager: AlbumsDataManager) {
-//        self.dataManager = dataManager
-//        super.init()
-//    }
 
     // MARK: - UITableViewDataSource
 
@@ -43,6 +36,7 @@ class AlbumsDataSource: GenericDataSource<Album>, UITableViewDataSource {
         let coverImages = album.image
         let albumObject = AlbumInfoObject(name: album.name, artist: album.artist.name, image: coverImages, tracks: track)
         let albumInfo = AlbumInfo(album: albumObject)
+        
         AppNavigator.shared.navigate(to: .albumDetails(album: albumInfo, state:state))
     }
 }

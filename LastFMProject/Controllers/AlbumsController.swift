@@ -9,33 +9,31 @@
 import Foundation
 import UIKit
 class AlbumsController: LastFMViewController {
-    private var dataManager = AlbumsDataManager()
-    private lazy var dataSourceProvider = AlbumsDataSourceProvider(dataManager: dataManager)
+    private lazy var dataSource = AlbumsDataSource()
     var artistName = ""
+    
+    lazy var viewModel : AlbumsViewModel = {
+        let viewModel = AlbumsViewModel(dataSource: dataSource, requestParameter: artistName)
+         return viewModel
+     }()
 
     @IBOutlet var albumsTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = artistName
-        albumsTableView.dataSource = dataSourceProvider
-        albumsTableView.delegate = dataSourceProvider
+        
+        albumsTableView.dataSource = viewModel.dataSource
+        albumsTableView.delegate = viewModel.dataSource
+        
+        viewModel.dataSource?.data.addAndNotify(observer: self) { [weak self] _ in
+            self?.albumsTableView.reloadData()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        loadTopAlbums()
-    }
-
-    fileprivate func loadTopAlbums() {
-        let command = LastFMCommand.getTopAlbums
-        let artistName = self.artistName
-        ApiManager().requestData([artistName], command: command) { [weak self] (albums: [Album]) in
-            self?.dataManager.items = albums
-            DispatchQueue.main.async {
-                self?.albumsTableView?.reloadData()
-            }
-            
-        }
+        viewModel.loadTopAlbums()
     }
 }

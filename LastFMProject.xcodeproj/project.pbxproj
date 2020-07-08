@@ -22,6 +22,7 @@
 		FD6B0DBE2377559200D04CD6 /* SavedAlbumsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6B0DBD2377559200D04CD6 /* SavedAlbumsDataManager.swift */; };
 		FD6BD56224AF26340007948F /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6BD56124AF26340007948F /* GenericDataSource.swift */; };
 		FD6BD56424AF26DA0007948F /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6BD56324AF26DA0007948F /* DynamicValue.swift */; };
+		FD6BD5AA24B5DC6D0007948F /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6BD5A924B5DC6D0007948F /* AlbumsViewModel.swift */; };
 		FD80395D236DD690000F552F /* ArtistDataSourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80395C236DD690000F552F /* ArtistDataSourceProvider.swift */; };
 		FD80395F236DE02D000F552F /* ArtistDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80395E236DE02D000F552F /* ArtistDataManager.swift */; };
 		FD803963236EF831000F552F /* LastFMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD803962236EF831000F552F /* LastFMViewController.swift */; };
@@ -38,8 +39,7 @@
 		FDC6C756236F2C680050799F /* SavedAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6C755236F2C680050799F /* SavedAlbumCell.swift */; };
 		FDC6C758236F30450050799F /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6C757236F30450050799F /* AlbumCell.swift */; };
 		FDC6C75A236F35A70050799F /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6C759236F35A70050799F /* ArtistCell.swift */; };
-		FDC6C75C236F380D0050799F /* AlbumsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6C75B236F380C0050799F /* AlbumsDataManager.swift */; };
-		FDC6C75E236F38230050799F /* AlbumsDataSourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6C75D236F38230050799F /* AlbumsDataSourceProvider.swift */; };
+		FDC6C75E236F38230050799F /* AlbumsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6C75D236F38230050799F /* AlbumsDataSource.swift */; };
 		FDC6C760237014AF0050799F /* SearchArtists.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6C75F237014AF0050799F /* SearchArtists.swift */; };
 		FDC6C768237016090050799F /* TopAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6C767237016090050799F /* TopAlbums.swift */; };
 		FDC6C76A237034610050799F /* AlbumDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6C769237034610050799F /* AlbumDataManager.swift */; };
@@ -85,6 +85,7 @@
 		FD6B0DBD2377559200D04CD6 /* SavedAlbumsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAlbumsDataManager.swift; sourceTree = "<group>"; };
 		FD6BD56124AF26340007948F /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 		FD6BD56324AF26DA0007948F /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
+		FD6BD5A924B5DC6D0007948F /* AlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewModel.swift; sourceTree = "<group>"; };
 		FD80395C236DD690000F552F /* ArtistDataSourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDataSourceProvider.swift; sourceTree = "<group>"; };
 		FD80395E236DE02D000F552F /* ArtistDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDataManager.swift; sourceTree = "<group>"; };
 		FD803962236EF831000F552F /* LastFMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastFMViewController.swift; sourceTree = "<group>"; };
@@ -103,8 +104,7 @@
 		FDC6C755236F2C680050799F /* SavedAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAlbumCell.swift; sourceTree = "<group>"; };
 		FDC6C757236F30450050799F /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		FDC6C759236F35A70050799F /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
-		FDC6C75B236F380C0050799F /* AlbumsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsDataManager.swift; sourceTree = "<group>"; };
-		FDC6C75D236F38230050799F /* AlbumsDataSourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsDataSourceProvider.swift; sourceTree = "<group>"; };
+		FDC6C75D236F38230050799F /* AlbumsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsDataSource.swift; sourceTree = "<group>"; };
 		FDC6C75F237014AF0050799F /* SearchArtists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchArtists.swift; sourceTree = "<group>"; };
 		FDC6C767237016090050799F /* TopAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbums.swift; sourceTree = "<group>"; };
 		FDC6C769237034610050799F /* AlbumDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDataManager.swift; sourceTree = "<group>"; };
@@ -223,8 +223,8 @@
 				FD6B0DBD2377559200D04CD6 /* SavedAlbumsDataManager.swift */,
 				FDC6C769237034610050799F /* AlbumDataManager.swift */,
 				FDC6C76B2370349A0050799F /* AlbumDataSourceManager.swift */,
-				FDC6C75B236F380C0050799F /* AlbumsDataManager.swift */,
-				FDC6C75D236F38230050799F /* AlbumsDataSourceProvider.swift */,
+				FDC6C75D236F38230050799F /* AlbumsDataSource.swift */,
+				FD6BD5A924B5DC6D0007948F /* AlbumsViewModel.swift */,
 				FD80395E236DE02D000F552F /* ArtistDataManager.swift */,
 				FD80395C236DD690000F552F /* ArtistDataSourceProvider.swift */,
 			);
@@ -452,13 +452,14 @@
 				FD4044892375B99300469C5C /* SavedAlbumsDataSourceProvider.swift in Sources */,
 				FD80395F236DE02D000F552F /* ArtistDataManager.swift in Sources */,
 				FD6BD56424AF26DA0007948F /* DynamicValue.swift in Sources */,
+				FD6BD5AA24B5DC6D0007948F /* AlbumsViewModel.swift in Sources */,
 				FDC6C76C2370349A0050799F /* AlbumDataSourceManager.swift in Sources */,
 				FDC6C76E237037280050799F /* TrackCell.swift in Sources */,
 				FDE297D323A8E2D900B19990 /* Cover.swift in Sources */,
 				FDE297CF23A8E29D00B19990 /* Tracks.swift in Sources */,
 				FDC6C758236F30450050799F /* AlbumCell.swift in Sources */,
 				FDC6C768237016090050799F /* TopAlbums.swift in Sources */,
-				FDC6C75E236F38230050799F /* AlbumsDataSourceProvider.swift in Sources */,
+				FDC6C75E236F38230050799F /* AlbumsDataSource.swift in Sources */,
 				FD8A25002367689D00EAB6DF /* SearchArtistController.swift in Sources */,
 				FDD903742375D8180048E00D /* CoreDataHelper.swift in Sources */,
 				FD112AFD23858AFC00E0619E /* AlbumDetails+CoreDataClass.swift in Sources */,
@@ -476,7 +477,6 @@
 				FD636EE9237B49AA00524519 /* Utils.swift in Sources */,
 				FD6B0DBE2377559200D04CD6 /* SavedAlbumsDataManager.swift in Sources */,
 				FD80395D236DD690000F552F /* ArtistDataSourceProvider.swift in Sources */,
-				FDC6C75C236F380D0050799F /* AlbumsDataManager.swift in Sources */,
 				FD8A24E92367520600EAB6DF /* AppDelegate.swift in Sources */,
 				FD65D40F239EAF1400D7E69C /* AppNavigator.swift in Sources */,
 				FDC6C760237014AF0050799F /* SearchArtists.swift in Sources */,
