@@ -35,7 +35,7 @@ public class AlbumCell: UITableViewCell {
         albumName.text = albumNameString
         artistName.text = artistNameString
 
-        if CoreDataHelper.shared.wasSaved(album: albumNameString, artist: artistNameString) {
+        if CoreDataHelper.shared.wasSaved(album: item) {
             saveButton.configureWithState(state: .delete)
         } else {
             saveButton.configureWithState(state: .save)
@@ -43,10 +43,10 @@ public class AlbumCell: UITableViewCell {
         saveButton.action = { [unowned self] in
             switch self.buttonState {
                 case .save:
-                    CoreDataHelper.shared.preloadAndSaveAlbum(album: albumNameString, artist: artistNameString)
+                    CoreDataHelper.shared.preloadAndSaveAlbum(album: item)
                     self.buttonState = .delete
                 case .delete:
-                    CoreDataHelper.shared.deleteAlbum(album: albumNameString, artist: artistNameString)
+                    CoreDataHelper.shared.deleteAlbum(album: item)
                     self.buttonState = .save
             }
         }

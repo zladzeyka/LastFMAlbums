@@ -58,9 +58,8 @@ class CoreDataHelper {
     
     /**
      Save albumInfo
-     * albumInfo : Object :Codable
-     
      - returns: Nothing
+     - Parameter albumInfo:Object :Codable
      */
     func saveAlbumInfo(albumInfo: AlbumInfo) {
         do {
@@ -95,6 +94,18 @@ class CoreDataHelper {
         }
     }
     
+    func preloadAndSaveAlbum(album: Album) {
+        let artistParameter = album.artist.name
+        let albumParameter = album.name
+        ApiManager().requestData([artistParameter, albumParameter], command: LastFMCommand.getAlbumDetails) {
+            (info: [AlbumInfo]) in
+            if !info.isEmpty {
+                if let albumDetails = info.first {
+                    self.saveAlbumInfo(albumInfo: albumDetails)
+                }
+            }
+        }
+    }
     /**
      Delete album
      * album : String - album name
@@ -118,6 +129,25 @@ class CoreDataHelper {
         }
     }
     
+    /// Delete album
+    /// - Parameter album: Album struct : Codable
+    func deleteAlbum(album: Album) {
+           var results: [AlbumDetails] = []
+        let fetchRequest = buildFetchRequestForAlbum(album: album.name, artist: album.artist.name)
+           do {
+               results = try managedContext.fetch(fetchRequest) as! [AlbumDetails]
+               if !results.isEmpty {
+                   if let deletedAlbum = results.first {
+                       managedContext.delete(deletedAlbum)
+                       try managedContext.save()
+                   }
+               }
+           }
+           catch {
+               print(error)
+           }
+       }
+    
     /**
      Check if album was previously saved
       * album : String - album name
@@ -127,6 +157,24 @@ class CoreDataHelper {
     func wasSaved(album: String, artist: String) -> Bool {
         var count = 0
         let fetchRequest = buildFetchRequestForAlbum(album: album, artist: artist)
+        do {
+            count = try managedContext.count(for: fetchRequest)
+        }
+        catch {
+            print(error)
+        }
+        return count > 0
+    }
+    
+    /**
+     Check if album was previously saved
+      * album : Album - album struct
+     - returns: Bool
+     */
+    func wasSaved(album: Album) -> Bool {
+        var count = 0
+        
+        let fetchRequest = buildFetchRequestForAlbum(album:album.name, artist: album.artist.name)
         do {
             count = try managedContext.count(for: fetchRequest)
         }
