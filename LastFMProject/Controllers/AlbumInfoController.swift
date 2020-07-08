@@ -20,9 +20,9 @@ class AlbumInfoController: LastFMViewController {
     var albumInfo = AlbumInfo(album: AlbumInfo.AlbumInfoObject(name: "", artist: "", image: [], tracks: Tracks(tracks: [])))
 
     // for configure initial save button apperiance
-    var buttonState: SaveButtonState = .save
+    var buttonState:ButtonState = .save
 
-    @IBOutlet var saveButton: SaveButton!
+    @IBOutlet var saveButton: FavouriteButton!
     @IBOutlet var tracksTableView: UITableView!
     @IBOutlet var coverImage: UIImageView!
     @IBOutlet var albumNameLabel: UILabel!
@@ -49,7 +49,7 @@ class AlbumInfoController: LastFMViewController {
         }
     }
 
-    fileprivate func configureSaveButton(state: SaveButtonState) {
+    fileprivate func configureSaveButton(state: ButtonState) {
         saveButton.buttonState = state
         saveButton.configureWithState(state: state)
     }

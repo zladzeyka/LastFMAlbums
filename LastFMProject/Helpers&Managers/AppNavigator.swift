@@ -21,7 +21,7 @@ class AppNavigator: Navigator {
         case search
         case savedAlbumDetails(albumInfo: AlbumInfo)
         case topAlbums(artistName: String)
-        case albumDetails(album: AlbumInfo, state : SaveButtonState)
+        case albumDetails(album: AlbumInfo, state : ButtonState)
     }
 
     static let shared = AppNavigator()

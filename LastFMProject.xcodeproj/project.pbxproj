@@ -15,7 +15,7 @@
 		FD112B572387FF7200E0619E /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD112B562387FF7200E0619E /* Connectivity.swift */; };
 		FD4044892375B99300469C5C /* SavedAlbumsDataSourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4044882375B99300469C5C /* SavedAlbumsDataSourceProvider.swift */; };
 		FD40448D2375D6BC00469C5C /* LastFMViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD40448C2375D6BC00469C5C /* LastFMViewController+Utils.swift */; };
-		FD636EE52379EE8A00524519 /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD636EE42379EE8A00524519 /* SaveButton.swift */; };
+		FD636EE52379EE8A00524519 /* FavouriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD636EE42379EE8A00524519 /* FavouriteButton.swift */; };
 		FD636EE9237B49AA00524519 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD636EE8237B49AA00524519 /* Utils.swift */; };
 		FD65D40B239EA8BD00D7E69C /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD65D40A239EA8BD00D7E69C /* Navigator.swift */; };
 		FD65D40F239EAF1400D7E69C /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD65D40E239EAF1400D7E69C /* AppNavigator.swift */; };
@@ -78,7 +78,7 @@
 		FD112B562387FF7200E0619E /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		FD4044882375B99300469C5C /* SavedAlbumsDataSourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAlbumsDataSourceProvider.swift; sourceTree = "<group>"; };
 		FD40448C2375D6BC00469C5C /* LastFMViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LastFMViewController+Utils.swift"; sourceTree = "<group>"; };
-		FD636EE42379EE8A00524519 /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
+		FD636EE42379EE8A00524519 /* FavouriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteButton.swift; sourceTree = "<group>"; };
 		FD636EE8237B49AA00524519 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		FD65D40A239EA8BD00D7E69C /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		FD65D40E239EAF1400D7E69C /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
@@ -274,7 +274,7 @@
 		FDC6C76F2370373C0050799F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FD636EE42379EE8A00524519 /* SaveButton.swift */,
+				FD636EE42379EE8A00524519 /* FavouriteButton.swift */,
 				FD636EEA237C646D00524519 /* Cells */,
 			);
 			path = View;
@@ -485,7 +485,7 @@
 				FD6BD56224AF26340007948F /* GenericDataSource.swift in Sources */,
 				FDC6C76A237034610050799F /* AlbumDataManager.swift in Sources */,
 				FD40448D2375D6BC00469C5C /* LastFMViewController+Utils.swift in Sources */,
-				FD636EE52379EE8A00524519 /* SaveButton.swift in Sources */,
+				FD636EE52379EE8A00524519 /* FavouriteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

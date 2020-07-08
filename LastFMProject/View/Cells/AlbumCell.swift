@@ -15,8 +15,8 @@ public class AlbumCell: UITableViewCell {
 
     @IBOutlet var albumName: UILabel!
     @IBOutlet var artistName: UILabel!
-    @IBOutlet var saveButton: SaveButton!
-    var buttonState = SaveButtonState.save
+    @IBOutlet var saveButton: FavouriteButton!
+    var buttonState = ButtonState.save
 
     func configure(with item: Album) {
         let url = item.image[1].text

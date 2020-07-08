@@ -1,5 +1,5 @@
 //
-//  SaveButton.swift
+//  FavouriteButton.swift
 //  LastFMProject
 //
 //  Created by Nadzeya Karaban on 11.11.19.
@@ -9,18 +9,18 @@
 import Foundation
 import UIKit
 
-enum SaveButtonState {
+enum ButtonState {
     case save
     case delete
 }
-
-class SaveButton: UIButton {
+class FavouriteButton: UIButton {
     enum Constants {
         static let saveImage = "heart"
         static let deleteImage = "trash"
     }
 
-    var buttonState = SaveButtonState.save
+
+    var buttonState = ButtonState.save
     var action: (() -> Void)?
     enum SaveButtonImages {
         case save
@@ -38,7 +38,7 @@ class SaveButton: UIButton {
         configure()
     }
 
-    func configureWithState(state: SaveButtonState) {
+    func configureWithState(state: ButtonState) {
         let buttonImage = (state == .save) ? SaveButtonImages.save.saveImage : SaveButtonImages.delete.saveImage
 
         buttonState = state
