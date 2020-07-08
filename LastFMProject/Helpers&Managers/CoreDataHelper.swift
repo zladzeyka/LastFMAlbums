@@ -45,7 +45,7 @@ class CoreDataHelper {
                 let album = object.name!
                 let artist = object.artist!
                 let coverUrl = object.image!
-                let albumObject = AlbumInfo.AlbumInfoObject(name: album, artist: artist, image: [Cover.init(text: coverUrl)], tracks: object.tracks!)
+                let albumObject = AlbumInfoObject(name: album, artist: artist, image: [Cover.init(text: coverUrl)], tracks: object.tracks!)
                 let albumDetails = AlbumInfo(album: albumObject)
                 infoResults.append(albumDetails)
             }
@@ -151,7 +151,7 @@ class CoreDataHelper {
             if !results.isEmpty {
                 
                 let cover = Cover.init(text: results[0].image!)
-                let albumObject = AlbumInfo.AlbumInfoObject.init(name: results[0].name!, artist: results[0].artist!, image: [cover], tracks: results[0].tracks!)
+                let albumObject = AlbumInfoObject.init(name: results[0].name!, artist: results[0].artist!, image: [cover], tracks: results[0].tracks!)
                 albumDetails = AlbumInfo(album: albumObject)
                 return albumDetails
             }
@@ -159,7 +159,7 @@ class CoreDataHelper {
         catch {
             print(error)
         }
-        return AlbumInfo.init(album: AlbumInfo.AlbumInfoObject(name: "", artist: "", image: [], tracks: Tracks.init(tracks: [])))
+        return AlbumInfo.init(album: AlbumInfoObject(name: "", artist: "", image: [], tracks: Tracks.init(tracks: [])))
     }
     
     func buildFetchRequestForAlbum(album: String, artist: String) -> NSFetchRequest<NSFetchRequestResult> {

@@ -17,7 +17,7 @@ class AlbumInfoController: LastFMViewController {
 
     private var dataManager = AlbumDataManager()
     private lazy var dataSourceProvider = AlbumDataSourceManager(dataManager: dataManager)
-    var albumInfo = AlbumInfo(album: AlbumInfo.AlbumInfoObject(name: "", artist: "", image: [], tracks: Tracks(tracks: [])))
+    var albumInfo = AlbumInfo(album: AlbumInfoObject(name: "", artist: "", image: [], tracks: Tracks(tracks: [])))
 
     // for configure initial save button apperiance
     var buttonState:ButtonState = .save
@@ -100,7 +100,7 @@ class AlbumInfoController: LastFMViewController {
         
         let cover = Cover(text: imageUrl)
         let track = Tracks(tracks: dataManager.items)
-        let albumObject = AlbumInfo.AlbumInfoObject(name: albumNameLabel.text!, artist: artistLabel.text!, image: [cover], tracks: track)
+        let albumObject = AlbumInfoObject(name: albumNameLabel.text!, artist: artistLabel.text!, image: [cover], tracks: track)
         let albumInfo = AlbumInfo(album: albumObject)
 
 

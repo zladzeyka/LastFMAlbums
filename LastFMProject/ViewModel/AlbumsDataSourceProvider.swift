@@ -41,7 +41,7 @@ public class AlbumsDataSourceProvider: NSObject, UITableViewDataSource, UITableV
         let state = cell.buttonState
         let track = Tracks(tracks: [])
         let coverImages = album.image
-        let albumObject = AlbumInfo.AlbumInfoObject(name: album.name, artist: album.artist.name, image: coverImages, tracks: track)
+        let albumObject = AlbumInfoObject(name: album.name, artist: album.artist.name, image: coverImages, tracks: track)
         let albumInfo = AlbumInfo(album: albumObject)
         AppNavigator.shared.navigate(to: .albumDetails(album: albumInfo, state:state))
     }
