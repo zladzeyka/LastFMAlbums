@@ -8,17 +8,10 @@
 
 import Foundation
 import UIKit
-class SavedAlbumsDataSourceProvider: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class SavedAlbumsDataSource: GenericDataSource<AlbumInfo>, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     struct Constants {
         static let cellIdentifier = "savedAlbumCell"
         static let cPadding: CGFloat = 10.0
-    }
-
-    private let dataManager: SavedAlbumsDataManager
-
-    init(dataManager: SavedAlbumsDataManager) {
-        self.dataManager = dataManager
-        super.init()
     }
 
     // MARK: - UICollectionViewDataSource
@@ -28,12 +21,12 @@ class SavedAlbumsDataSourceProvider: NSObject, UICollectionViewDataSource, UICol
     }
 
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataManager.items.count
+        return data.value.count
     }
 
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellIdentifier, for: indexPath) as? SavedAlbumCell {
-            let item = dataManager.item(at: indexPath.row)
+            let item = data.value[indexPath.row]
             cell.configure(item: item)
             return cell
         } else {
@@ -44,7 +37,7 @@ class SavedAlbumsDataSourceProvider: NSObject, UICollectionViewDataSource, UICol
     // MARK: - UICollectionViewDelegate
 
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let item = dataManager.item(at: indexPath.row)
+        let item = data.value[indexPath.row]
         AppNavigator.shared.navigate(to: .savedAlbumDetails(albumInfo: item))
     }
 

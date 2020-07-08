@@ -13,16 +13,16 @@
 		FD112B512386F69000E0619E /* CoreDataHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD112B052386B75700E0619E /* CoreDataHelperTests.swift */; platformFilter = ios; };
 		FD112B552386FC5D00E0619E /* LastFMProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD8A24F12367520600EAB6DF /* LastFMProject.xcdatamodeld */; platformFilter = ios; };
 		FD112B572387FF7200E0619E /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD112B562387FF7200E0619E /* Connectivity.swift */; };
-		FD4044892375B99300469C5C /* SavedAlbumsDataSourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4044882375B99300469C5C /* SavedAlbumsDataSourceProvider.swift */; };
+		FD4044892375B99300469C5C /* SavedAlbumsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4044882375B99300469C5C /* SavedAlbumsDataSource.swift */; };
 		FD40448D2375D6BC00469C5C /* LastFMViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD40448C2375D6BC00469C5C /* LastFMViewController+Utils.swift */; };
 		FD636EE52379EE8A00524519 /* FavouriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD636EE42379EE8A00524519 /* FavouriteButton.swift */; };
 		FD636EE9237B49AA00524519 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD636EE8237B49AA00524519 /* Utils.swift */; };
 		FD65D40B239EA8BD00D7E69C /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD65D40A239EA8BD00D7E69C /* Navigator.swift */; };
 		FD65D40F239EAF1400D7E69C /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD65D40E239EAF1400D7E69C /* AppNavigator.swift */; };
-		FD6B0DBE2377559200D04CD6 /* SavedAlbumsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6B0DBD2377559200D04CD6 /* SavedAlbumsDataManager.swift */; };
 		FD6BD56224AF26340007948F /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6BD56124AF26340007948F /* GenericDataSource.swift */; };
 		FD6BD56424AF26DA0007948F /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6BD56324AF26DA0007948F /* DynamicValue.swift */; };
 		FD6BD5AA24B5DC6D0007948F /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6BD5A924B5DC6D0007948F /* AlbumsViewModel.swift */; };
+		FD6BD5AE24B5F4490007948F /* SavedAlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6BD5AD24B5F4490007948F /* SavedAlbumsViewModel.swift */; };
 		FD80395D236DD690000F552F /* ArtistDataSourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80395C236DD690000F552F /* ArtistDataSourceProvider.swift */; };
 		FD80395F236DE02D000F552F /* ArtistDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80395E236DE02D000F552F /* ArtistDataManager.swift */; };
 		FD803963236EF831000F552F /* LastFMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD803962236EF831000F552F /* LastFMViewController.swift */; };
@@ -76,16 +76,16 @@
 		FD112B0F2386B7D800E0619E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD112B3E2386F4B700E0619E /* LastFMProjectTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LastFMProjectTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FD112B562387FF7200E0619E /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
-		FD4044882375B99300469C5C /* SavedAlbumsDataSourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAlbumsDataSourceProvider.swift; sourceTree = "<group>"; };
+		FD4044882375B99300469C5C /* SavedAlbumsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAlbumsDataSource.swift; sourceTree = "<group>"; };
 		FD40448C2375D6BC00469C5C /* LastFMViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LastFMViewController+Utils.swift"; sourceTree = "<group>"; };
 		FD636EE42379EE8A00524519 /* FavouriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteButton.swift; sourceTree = "<group>"; };
 		FD636EE8237B49AA00524519 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		FD65D40A239EA8BD00D7E69C /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		FD65D40E239EAF1400D7E69C /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
-		FD6B0DBD2377559200D04CD6 /* SavedAlbumsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAlbumsDataManager.swift; sourceTree = "<group>"; };
 		FD6BD56124AF26340007948F /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 		FD6BD56324AF26DA0007948F /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
 		FD6BD5A924B5DC6D0007948F /* AlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewModel.swift; sourceTree = "<group>"; };
+		FD6BD5AD24B5F4490007948F /* SavedAlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAlbumsViewModel.swift; sourceTree = "<group>"; };
 		FD80395C236DD690000F552F /* ArtistDataSourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDataSourceProvider.swift; sourceTree = "<group>"; };
 		FD80395E236DE02D000F552F /* ArtistDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDataManager.swift; sourceTree = "<group>"; };
 		FD803962236EF831000F552F /* LastFMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastFMViewController.swift; sourceTree = "<group>"; };
@@ -219,8 +219,8 @@
 			children = (
 				FD6BD56324AF26DA0007948F /* DynamicValue.swift */,
 				FD6BD56124AF26340007948F /* GenericDataSource.swift */,
-				FD4044882375B99300469C5C /* SavedAlbumsDataSourceProvider.swift */,
-				FD6B0DBD2377559200D04CD6 /* SavedAlbumsDataManager.swift */,
+				FD4044882375B99300469C5C /* SavedAlbumsDataSource.swift */,
+				FD6BD5AD24B5F4490007948F /* SavedAlbumsViewModel.swift */,
 				FDC6C769237034610050799F /* AlbumDataManager.swift */,
 				FDC6C76B2370349A0050799F /* AlbumDataSourceManager.swift */,
 				FDC6C75D236F38230050799F /* AlbumsDataSource.swift */,
@@ -449,12 +449,13 @@
 			files = (
 				FD938A9E236B426E0002382B /* ApiManager.swift in Sources */,
 				FD65D40B239EA8BD00D7E69C /* Navigator.swift in Sources */,
-				FD4044892375B99300469C5C /* SavedAlbumsDataSourceProvider.swift in Sources */,
+				FD4044892375B99300469C5C /* SavedAlbumsDataSource.swift in Sources */,
 				FD80395F236DE02D000F552F /* ArtistDataManager.swift in Sources */,
 				FD6BD56424AF26DA0007948F /* DynamicValue.swift in Sources */,
 				FD6BD5AA24B5DC6D0007948F /* AlbumsViewModel.swift in Sources */,
 				FDC6C76C2370349A0050799F /* AlbumDataSourceManager.swift in Sources */,
 				FDC6C76E237037280050799F /* TrackCell.swift in Sources */,
+				FD6BD5AE24B5F4490007948F /* SavedAlbumsViewModel.swift in Sources */,
 				FDE297D323A8E2D900B19990 /* Cover.swift in Sources */,
 				FDE297CF23A8E29D00B19990 /* Tracks.swift in Sources */,
 				FDC6C758236F30450050799F /* AlbumCell.swift in Sources */,
@@ -475,7 +476,6 @@
 				FDC6C756236F2C680050799F /* SavedAlbumCell.swift in Sources */,
 				FDE297D123A8E2BB00B19990 /* Track.swift in Sources */,
 				FD636EE9237B49AA00524519 /* Utils.swift in Sources */,
-				FD6B0DBE2377559200D04CD6 /* SavedAlbumsDataManager.swift in Sources */,
 				FD80395D236DD690000F552F /* ArtistDataSourceProvider.swift in Sources */,
 				FD8A24E92367520600EAB6DF /* AppDelegate.swift in Sources */,
 				FD65D40F239EAF1400D7E69C /* AppNavigator.swift in Sources */,

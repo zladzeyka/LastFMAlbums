@@ -13,29 +13,33 @@ class SavedAlbumsController: LastFMViewController {
         static let searchController = "searchArtistController"
     }
     
-    private var dataManager = SavedAlbumsDataManager()
-    private lazy var savedAlbumsManager = SavedAlbumsDataSourceProvider(dataManager: dataManager)
+    private lazy var dataSource = SavedAlbumsDataSource()
+    lazy var viewModel : SavedAlbumsViewModel = {
+        let viewModel = SavedAlbumsViewModel(dataSource: dataSource)
+         return viewModel
+     }()
+
     @IBOutlet var albumsCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(activateSearch))
-        albumsCollectionView.delegate = savedAlbumsManager
-        albumsCollectionView.dataSource = savedAlbumsManager
+        albumsCollectionView.delegate = viewModel.dataSource
+        albumsCollectionView.dataSource = viewModel.dataSource
+        
+        viewModel.dataSource?.data.addAndNotify(observer: self) { [weak self] _ in
+            self?.albumsCollectionView.reloadData()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fetchAlbums()
+        viewModel.loadSavedAlbums()
     }
 
     @objc func activateSearch() {
         AppNavigator.shared.navigate(to: AppNavigator.Destination.search)
     }
 
-    func fetchAlbums() {
-        dataManager.items = CoreDataHelper.shared.retrieveAlbums()
-        albumsCollectionView.reloadData()
-    }
 }
 
