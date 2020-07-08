@@ -180,7 +180,6 @@
 		FD636EEB237C649F00524519 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FD6BD56324AF26DA0007948F /* DynamicValue.swift */,
 				FDC6C75F237014AF0050799F /* SearchArtists.swift */,
 				FDC6C767237016090050799F /* TopAlbums.swift */,
 				FDE297C623A7E1A400B19990 /* AlbumInfo.swift */,
@@ -218,6 +217,7 @@
 		FD6BD56024AF24E40007948F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FD6BD56324AF26DA0007948F /* DynamicValue.swift */,
 				FD6BD56124AF26340007948F /* GenericDataSource.swift */,
 				FD4044882375B99300469C5C /* SavedAlbumsDataSourceProvider.swift */,
 				FD6B0DBD2377559200D04CD6 /* SavedAlbumsDataManager.swift */,
