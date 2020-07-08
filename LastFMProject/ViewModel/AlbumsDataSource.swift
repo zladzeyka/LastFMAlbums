@@ -9,13 +9,15 @@
 import Foundation
 import UIKit
 
-class AlbumsDataSource: GenericDataSource<Album>, UITableViewDataSource, UITableViewDelegate {
+class AlbumsDataSource: GenericDataSource<Album> {
     struct Constants {
         static let cellIdentifier = "albumsCellID"
         static let mainStoryboard = "Main"
     }
+}
+// MARK: - UITableViewDataSource
 
-    // MARK: - UITableViewDataSource
+extension AlbumsDataSource: UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { data.value.count
     }
@@ -27,6 +29,11 @@ class AlbumsDataSource: GenericDataSource<Album>, UITableViewDataSource, UITable
 
         return cell
     }
+}
+
+// MARK: - UITableViewDelegate
+
+extension AlbumsDataSource: UITableViewDelegate {
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let album = data.value[indexPath.row]
