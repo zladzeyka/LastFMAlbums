@@ -24,10 +24,10 @@ class SavedAlbumsController: LastFMViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(activateSearch))
-        albumsCollectionView.delegate = viewModel.dataSource
-        albumsCollectionView.dataSource = viewModel.dataSource
+        albumsCollectionView.delegate = dataSource
+        albumsCollectionView.dataSource = dataSource
         
-        viewModel.dataSource?.data.addAndNotify(observer: self) { [weak self] _ in
+        dataSource.data.addAndNotify(observer: self) { [weak self] _ in
             self?.albumsCollectionView.reloadData()
         }
     }

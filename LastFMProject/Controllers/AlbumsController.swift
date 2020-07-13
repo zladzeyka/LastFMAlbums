@@ -24,10 +24,10 @@ class AlbumsController: LastFMViewController {
         
         title = artistName
         
-        albumsTableView.dataSource = viewModel.dataSource
-        albumsTableView.delegate = viewModel.dataSource
+        albumsTableView.dataSource = dataSource
+        albumsTableView.delegate = dataSource
         
-        viewModel.dataSource?.data.addAndNotify(observer: self) { [weak self] _ in
+        dataSource.data.addAndNotify(observer: self) { [weak self] _ in
             self?.albumsTableView.reloadData()
         }
     }
