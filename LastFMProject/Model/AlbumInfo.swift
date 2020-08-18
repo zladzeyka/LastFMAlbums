@@ -11,11 +11,11 @@ import Foundation
  Struct for AlbumInfo response
  */
 struct AlbumInfo: Codable {
-    var album: AlbumInfoObject
+    var album: AlbumInfoModel
 }
-struct AlbumInfoObject: Codable {
-    var name: String
-    var artist: String
-    var image: [Cover]
-    var tracks: Tracks
+struct AlbumInfoModel: Codable {
+    var name: String?
+    var artist: String?
+    var image: [Cover]?
+    var tracks: Tracks?
 }
