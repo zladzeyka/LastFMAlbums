@@ -13,12 +13,12 @@ enum ButtonState {
     case save
     case delete
 }
+
 class FavouriteButton: UIButton {
     enum Constants {
         static let saveImage = "heart"
-        static let deleteImage = "trash"
+        static let deleteImage = "heart.fill"
     }
-
 
     var buttonState = ButtonState.save
     var action: (() -> Void)?
